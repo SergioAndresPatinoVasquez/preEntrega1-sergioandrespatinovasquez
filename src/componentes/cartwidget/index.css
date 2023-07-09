@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --black:#000000;
+    --white: #FFFFFF;
+    --light: #C7C7C7;
+    --text: #777676;
+    --vinotinto: #63174A;
+    --sm:12px;
+    --md :16px;
+    --lg :18px;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+img{
+    width: 26px;
+}
+
+.shopping_cart div{
+    width: 16px;
+    height: 16px;
+    background-color: var(--vinotinto); 
+    border-radius: 50%; 
+    font-size: var(--sm);
+    color: var(--light);
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shopping_cart{
+    position: relative;
+}
