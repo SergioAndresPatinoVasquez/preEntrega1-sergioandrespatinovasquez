@@ -2,7 +2,7 @@
 import Cartwidget from '../cartwidget';
 import './index.css';
 import icon_menu from '../../assets/icon_menu.svg';
-import logoUno from '../../assets/logoUno.jpeg';
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -13,32 +13,31 @@ const Navbar = () => {
                 <img src={icon_menu} alt="" className='menu'/>
 
                 <div className='navbar-left'>
-                    <img src={logoUno} alt="" className='logo'/>
-
+                    <NavLink to="/">
+                        <img src='https://i.postimg.cc/dV75Syp5/logoUno.jpg' alt="" className='logo'/>
+                    </NavLink>
                     <ul>
                         <li>
-                            <a href="/">Productos</a>
+                            <NavLink to="/">Home</NavLink>
                         </li>
                         <li>
-                            <a href="/">Guitarras</a>
+                            <NavLink to="/category/guitarras">Guitarras</NavLink>
                         </li>
                         <li>
-                            <a href="/">Pianos</a>
+                            <NavLink to="/category/pianos">Pianos</NavLink>
                         </li>
                         <li>
-                            <a href="/">Saxofones</a>
+                            <NavLink to="/category/saxofones">Saxofones</NavLink>
                         </li>
                         <li>
-                            <a href="/">Armónicas</a>
-                        </li>                    <li>
-                            <a href="/">Púas</a>
-                        </li>
+                            <NavLink to="/category/baterias">Baterías</NavLink>
+                        </li>                    
                     </ul>
                 </div>
 
                 <div className='navbar-right'>
                     <ul>
-                        <li className='navbar-usuario'>NombreUsuario</li>
+                        
                         <li>
                             <Cartwidget className='carrito'/>
                         </li>

@@ -19,7 +19,7 @@ body{
 }
 
 img{
-    width: 26px;
+    width: 64px;
 }
 
 .shopping_cart div{
@@ -30,8 +30,8 @@ img{
     font-size: var(--sm);
     color: var(--light);
     position: absolute;
-    top: -6px;
-    right: -6px;
+    top: 2px;
+    right: 0px;
     display: flex;
     justify-content: center;
     align-items: center;

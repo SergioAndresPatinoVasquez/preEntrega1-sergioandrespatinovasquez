@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --black:#000000;
+    --white: #FFFFFF;
+    --light: #C7C7C7;
+    --text: #777676;
+    --vinotinto: #63174A;
+    --sm:12px;
+    --md :16px;
+    --lg :18px;
+}
+
+
+.cards{
+    width: 100%;
+    border: 1px solid var(--light);
+    border-radius: 12px 12px 12px 12px;
+    position: relative;
+    height: 420px;
+   
+}
+
+.card-img{
+    width: 100%;
+    object-fit: contain;
+    border-radius: 12px 12px 0 0;
+}
+
+.card-title{
+    color:var(--vinotinto);
+    font-size: var(--lg);
+}
+
+.card-description, .card-price{
+    font-size: var(--md);
+    color:var(--light);
+  
+}
+
+
+
+.card-button{
+    cursor: pointer;
+    position: absolute;
+    font-size: var(--md);
+    bottom:0;
+    background-color: var(--vinotinto);
+    color:var(--white);
+    width: 100%;
+    border:var(--vinotinto);
+    border-radius: 8px;
+    height: 24px;
+ 
+}
+
+
+.cards-container{
+    
+    margin-top: 30px;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 240px);
+    gap:60px;
+    place-content: center;
+} 
+
+
+.item-detail{
+    min-height: 80vh;
+   
+
+    display: grid;
+
+    grid-template-areas: 'img title'
+                        'img description'; 
+    grid-template-columns: 1fr 1fr;
+  
+}
+
+.item-producto{
+    grid-area: title;
+    
+}
+
+.detail{
+    font-size: var(--lg);
+    color: var(--vinotinto);
+    padding-top: 40px;
+    padding-left: 40px;
+    margin-bottom: 5px;
+    text-align: justify;
+    margin-right: 40px;
+    
+}
+
+.item-img{
+    grid-area: img;
+    display: grid;
+    place-items: center;
+    
+}
+
+.detail-img{
+    margin-top: 10px;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+    border-radius: 15px;
+
+}
+
+
+.item-description{
+    grid-area: description;
+}
+
+
+
+button{
+    background-color:var(--vinotinto);
+    color: var(--white);
+    border-radius: 1px solid var(--vinotinto);
+    border: #63174A;
+}
+
+span{
+    color: var(--vinotinto);
+    font-size: var(--lg);
+    font-weight: 700;
+}
+
+.botones{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-top: 40px;
+    margin-left: 30px;
+   
+    
+}
+
+.sumar, .restar {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    
+}
+
+.comprar{
+    margin-left: 40px;
+    height: 30px;
+    width: 120px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+
+
+@media(max-width:640px){
+    .item-detail{
+        min-height: 80vh;
+       
+    
+        display: grid;
+    
+        grid-template-areas: 'img'
+                            'title'
+                            'description'; 
+        grid-template-columns: 1fr;
+      
+    }
+    .detail{
+        font-size: var(--md);
+        color: var(--vinotinto);
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-bottom: 0px;
+        text-align: justify;
+        margin-right: 10px;
+        
+    }
+    .span{
+        
+        font-size: var(--md);
+        
+    }
+}

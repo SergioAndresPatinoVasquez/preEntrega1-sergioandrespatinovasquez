@@ -1,4 +1,4 @@
-import carrito from "../../assets/carrito.png";
+import carrito from "../../assets/carrito.jpeg";
 import './index.css';
 
 const Cartwidget = () => {

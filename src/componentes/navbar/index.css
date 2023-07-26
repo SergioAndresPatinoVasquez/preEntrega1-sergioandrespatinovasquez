@@ -18,7 +18,9 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
-
+header{
+    border-bottom: 0.1px solid var(--vinotinto);
+}
 
 .menu{
     display: none;
@@ -90,7 +92,8 @@ nav {
         display: block;
         width: 40px;
     }
-    .navbar-left ul{
+
+    .navbar-left ul li{
         display: none;
     }
     .navbar-usuario{
