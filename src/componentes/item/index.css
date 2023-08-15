@@ -63,7 +63,7 @@
     margin-top: 30px;
     margin-bottom: 40px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 240px);
+    grid-template-columns: repeat(auto-fill, 230px);
     gap:60px;
     place-content: center;
 } 
@@ -156,10 +156,12 @@ span{
 
 .comprar{
     margin-left: 40px;
-    height: 30px;
-    width: 120px;
+    height: auto;
+    width: auto;
+    padding: 0.5em;
     border-radius: 15px;
     cursor: pointer;
+    font-size: var(--lg);
 }
 
 

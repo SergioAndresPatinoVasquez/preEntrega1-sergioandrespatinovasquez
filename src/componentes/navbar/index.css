@@ -78,13 +78,22 @@ nav {
 .navbar-right ul li a:hover {
     text-decoration: none;    
     border:  1px solid var(--light);
-    padding: 2px;
+    
 }
+
+.navbar-right :last-child:hover{
+    
+    border:none;
+}
+
 
 .navbar-usuario{
     color: var(--vinotinto);
     margin-right: 12px;
 }
+
+
+
 
 
 @media(max-width:640px){

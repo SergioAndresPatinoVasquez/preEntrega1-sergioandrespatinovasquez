@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --black:#000000;
+    --white: #FFFFFF;
+    --light: #C7C7C7;
+    --text: #777676;
+    --vinotinto: #63174A;
+    --sm:12px;
+    --md :16px;
+    --lg :18px;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    padding-bottom: 30px;
+    margin-top: 30px;
+}
+
+.resumen-carrito{
+     
+    padding: 240px;
+    
+
+} 
+
+h2{    
+    color:var(--text);
+    font-size: var(--md);
+}
+
+table{
+    margin: 0.1rem auto;
+    border: 1px solid var(--vinotinto);
+    border-collapse: collapse;
+    border-spacing: 1rem;
+    margin-bottom: 3rem;
+    
+}
+
+table th, td{
+    padding: 2rem;
+}
+
+
+th{
+    border: 1px solid var(--vinotinto);
+    color:var(--vinotinto);
+    
+}
+
+td{
+    border: 1px solid var(--vinotinto);
+   
+}
+
+.carrito-items{
+    font-size: var(--md);
+    color: var(--text);
+
+}
+
+.eliminar{
+    color: var(--white);
+    font-size: var(--lg);
+    width: 20px;
+    border-radius: 20%;
+    cursor: pointer;
+}  
+
+.comprar-carrito{
+    
+    display: grid;
+    place-items: center;
+    
+}
+
+
+.ir-comprar, .boton-carrito{
+    border-radius: 8px;
+    padding: 0.6em;
+    font-size: var(--lg);
+    cursor: pointer;
+}
+
+.total-pagar{
+    display: grid;
+    place-items: center;
+    color: var(--vinotinto);
+    font-weight: bold;
+    font-size: var(--lg);
+}
+
+.botones-carrito{
+    display: flex;
+    justify-content: space-around;
+    margin: 3em;
+}

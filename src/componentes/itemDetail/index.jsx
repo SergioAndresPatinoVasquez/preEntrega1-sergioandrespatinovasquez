@@ -1,31 +1,28 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import ItemCount from '../itemCount'
-import { useState } from 'react';
-import PacmanLoader from "react-spinners/PacmanLoader";
+import { CartContext } from '../../context/CartContext'
 
-
-// const override = {
-//   position: 'absolute',
-//   transform: 'translate3d(-50%, -50%, 0)',
-//   left: '50%',
-//   right: '50%',
-//   top: '50%',
-//   bottom: '50%',
-
-// };
 
 
 const ItemDetail = ({ producto }) => {
 
-  // const [loading, setLoading] = useState(true)
+  const {carrito, agregarAlCarrito} = useContext(CartContext);
+  console.log(carrito);
 
-  // setTimeout(() => {
-  //   setLoading(false)
-  // }, 2000)
+const [count, setCount] = useState(1)
 
-  const onAdd = (cantidad) => {
-    console.log('compraste', cantidad)
-  }
+const sumar = () =>{
+    if(count < producto.stock){
+        setCount(count+1)
+    }
+}
+const restar = () =>{
+    if(count>1){
+        setCount(count-1)
+    }
+}
+
+
   return (
 
         <div className='item-detail'>
@@ -38,7 +35,7 @@ const ItemDetail = ({ producto }) => {
                 <p className='detail'><span>Precio :</span> ${producto.price}</p>
                 <p className='detail'><span>Descripción del producto :</span> {producto.description}</p>
                             
-                <ItemCount stock={producto.stock} onAdd={onAdd} />
+                <ItemCount stock={producto.stock}  count={count} handleAgregar={()=>{ agregarAlCarrito(producto, count)}} sumar={sumar} restar={restar} onAdd={()=>{agregarAlCarrito(producto)}} />
               
               </div>
 

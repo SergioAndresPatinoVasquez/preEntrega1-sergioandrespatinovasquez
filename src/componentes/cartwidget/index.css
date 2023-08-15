@@ -30,8 +30,8 @@ img{
     font-size: var(--sm);
     color: var(--light);
     position: absolute;
-    top: 2px;
-    right: 0px;
+    top: 4px;
+    right: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
