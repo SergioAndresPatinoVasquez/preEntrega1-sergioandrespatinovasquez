@@ -30,7 +30,7 @@ const Itemlistcontainer = () => {
 
     useEffect(() => {
          setLoading(true)
-            console.log("loading",loading)
+            
             const coleccionProductos = categoryId ? query(collection(db, "productos"), where("category", "==", categoryId)) : collection(db, "productos")
             getDocs(coleccionProductos)
         
@@ -61,10 +61,13 @@ const Itemlistcontainer = () => {
                 }
             })
             .catch((error) => console.log(error))
-            .finally(setLoading(false))
+            .finally(setTimeout(()=>{
+                setLoading(false)
+            },2000))
+                
     }, [categoryId])
 
-    console.log("loading", loading);
+    
     return (
         <menu>
             <section>

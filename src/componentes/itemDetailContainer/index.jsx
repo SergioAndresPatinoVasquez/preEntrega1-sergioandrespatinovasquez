@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { getItem } from '../../mock/data'
 import ItemDetail from '../itemDetail'
 import { useParams } from 'react-router-dom'
 import PacmanLoader from "react-spinners/PacmanLoader";
@@ -31,7 +30,9 @@ const ItemDetailContainer = () => {
     getDoc(referenciaAlDoc)
       .then((res) => setProducto({ id: res.id, ...res.data() }))
       .catch((error) => console.log(error))
-      .finally(() => setLoading(false))
+      .finally(setTimeout(()=>{
+        setLoading(false)
+    },2000))
 
   }, [])
 

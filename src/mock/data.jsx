@@ -74,22 +74,22 @@ export const productos = [
 ]
 
 
-export const getProducto = () => {
+// export const getProducto = () => {
 
-    return new Promise((resolve) => {
-        setTimeout(()=>{
-            resolve(productos)
-        }, 5000)
-    })
-}
+//     return new Promise((resolve) => {
+//         setTimeout(()=>{
+//             resolve(productos)
+//         }, 5000)
+//     })
+// }
 
-export const getItem = (id) => {  
+// export const getItem = (id) => {  
 
-    return new Promise((resolve) => {
-        setTimeout(()=>{
+//     return new Promise((resolve) => {
+//         setTimeout(()=>{
         
-            resolve(productos.find((item)=> item.id === id))
-        }, 5000)
-    })
-}
+//             resolve(productos.find((item)=> item.id === id))
+//         }, 5000)
+//     })
+// }
 
