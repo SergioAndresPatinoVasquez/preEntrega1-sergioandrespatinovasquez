@@ -8,18 +8,36 @@ La ecommerce cuenta con una serie de productos musicales los cuales están clasi
 
 
 ## Instalación 
-Asegúrate de tener instalado Node.js  en tu equipo.
 
-Puedes comprobarlo ejecutando en la terminal:
+```bash
+GitHub
+```
+Accede al link del repositorio de GitHub y realiza un fork al proyecto
+para realizar una copia:
+```bash
+GitHub => Fork
+```
+
+Crea una carpeta local, y en la terminal de comandos ejecuta git clone:
+```bash
+- cd carpetalocal
+- git clone https://github.com/SergioAndresPatinoVasquez/preEntrega1-sergioandrespatinovasquez
+- Finalmente ejecuta VisualEstudiaCode y abre el proyecto.
+```
+
+### Instalación de dependencias:
+
+Se instala Node.js.
+
 ```bash
 $ node -v
 ```
 
-Una vez lo tengas, ejecuta los siguientes comandos:
+React + Vite usando el gestor de paquetes:
 ```bash
 $ npm create vite@latest <nombre-de-mi-proyecto>
 ```
-Entre los diferentes frameworks que te sugiere, elige react.
+Entre los diferentes frameworks que te sugiere, se selecciono React:
 
 ```bash
 ? Select a framework: › - Use arrow-keys. Return to submit.
@@ -30,14 +48,23 @@ Entre los diferentes frameworks que te sugiere, elige react.
     Lit
     Svelte
 ```
+Luego, se selecciona Javascript :
+```bash
+Select a framework: › - React.
+? Select a variant:
+    TypeScript
+    TypeScript + SWC
+❯   Javascript
+    Javascript + SWC
+```
 
-Una vez creado, dirígete al directorio creado y ejecuta el comando de instalación:
+Una vez creado la estructura del proyecto, se ejecuta el comando de instalación de dependencias:
 ```bash
 $ cd <nombre-de-mi-proyecto>
 $ npm install
 ```
 
-Una vez instaladas las dependencias, ejecuta el comando de desarrollo y ya puedes empezar a trabajar.
+Luego se levanta el proyecto con el comando de desarrollo:
 ```bash
 $ npm run dev
 
@@ -56,7 +83,7 @@ Hooks
 .useEfect
 .useContext
 .useParams
-*useForm, empleado para hacer el formulario en el componente Checkout.
+.useForm
 ```
 
 Pacman Loader
@@ -69,7 +96,7 @@ https://firebase.google.com/
 Firestore
 ```
 
-Hosting de imagenes:
+## Hosting de imagenes:
 ```bash
 https://postimages.org/
 ```
@@ -79,6 +106,7 @@ https://postimages.org/
 ## Agradecimientos
 
  - [Coderhouse](https://www.coderhouse.com.co/)
+ - CoderAsk
  - Profesor Julian Salcedo Lopez
  - Tutora Laura Therisod
 

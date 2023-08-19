@@ -29,12 +29,6 @@ const Checkout = () => {
             date: serverTimestamp()
         }
 
-        console.log("nombre", pedido.cliente.nombre)
-        console.log('pedido', pedido)
-        console.log("nombre", pedido.cliente.email)
-        console.log("nombre", pedido.cliente.reemail)
-
-
 
         if (pedido.cliente.email === pedido.cliente.reemail) {
             setErroremail(false)

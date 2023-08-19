@@ -11,7 +11,6 @@ const Cartwidget = () => {
         <div className="shopping_cart">
             <Link className="letra-carrito" to="/carrito">
                 Carrito
-                {/* <img src={carrito} alt="" className="carrito"/> */}
                 {cantidadCarrito() > 0 && <div>{cantidadCarrito()}</div>}
             </Link>
         </div>
