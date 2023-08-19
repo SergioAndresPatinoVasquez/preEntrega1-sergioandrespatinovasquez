@@ -1,42 +1,54 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
 :root {
-    --black:#000000;
+    --black: #000000;
     --white: #FFFFFF;
     --light: #C7C7C7;
     --text: #777676;
+    --verde: #00D8BC;
     --vinotinto: #63174A;
-    --sm:12px;
-    --md :16px;
-    --lg :18px;
+    --sm: 12px;
+    --md: 16px;
+    --lg: 18px;
 }
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
 }
 
-img{
+img {
     width: 64px;
 }
 
-.shopping_cart div{
+.letra-carrito {
+    color: var(--verde);
+}
+
+.shopping_cart div {
     width: 16px;
     height: 16px;
-    background-color: var(--vinotinto); 
-    border-radius: 50%; 
+    background-color: var(--white);
+    border-radius: 50%;
     font-size: var(--sm);
-    color: var(--light);
+    color: var(--vinotinto);
     position: absolute;
-    top: 4px;
-    right: 12px;
+    top: -0px;
+    right: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.shopping_cart{
+.shopping_cart {
     position: relative;
+}
+
+@media(max-width:790px) {
+    .shopping_cart div {
+        right: 42%;
+        top: -4px;
+    }
 }

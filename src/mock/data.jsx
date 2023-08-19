@@ -89,7 +89,7 @@ export const getItem = (id) => {
         setTimeout(()=>{
         
             resolve(productos.find((item)=> item.id === id))
-        }, 2000)
+        }, 5000)
     })
 }
 

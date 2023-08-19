@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-const ItemCount = ({count, sumar, restar, handleAgregar}) =>{
+const ItemCount = ({ count, sumar, restar, handleAgregar }) => {
 
-   
 
-    return(
+
+    return (
 
         <div className="botones">
             <button className="restar" onClick={restar}>-</button>

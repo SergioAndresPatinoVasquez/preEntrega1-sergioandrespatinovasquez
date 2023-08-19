@@ -1,28 +1,29 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
 :root {
-    --black:#000000;
+    --black: #000000;
     --white: #FFFFFF;
     --light: #C7C7C7;
     --text: #777676;
     --vinotinto: #63174A;
-    --sm:12px;
-    --md :16px;
-    --lg :18px;
+    --verde: #00D8BC;
+    --sm: 12px;
+    --md: 16px;
+    --lg: 18px;
 }
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
 }
 
-.container-contacto{
+.container-contacto {
 
     display: grid;
     place-content: center;
-    
+
 }
 
 
@@ -30,14 +31,16 @@ body{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    
-    
+    align-items: center;
+    justify-content: center;
+
+
 }
 
-.contacto{
+.contacto {
     margin-bottom: 2rem;
     font-size: 1.6em;
-    
+
 }
 
 .formulario input {
@@ -53,7 +56,8 @@ body{
     outline: 1px solid var(--light);
 }
 
-.agregar-al-carrito, .enviar {
+.agregar-al-carrito,
+.enviar {
     font-weight: bold;
     font-size: var(--lg);
     color: var(--white);
@@ -65,9 +69,14 @@ body{
     cursor: pointer;
 }
 
-.pedidoId, .errorEmail{
+.enviar:disabled {
+    background-color: #777676;
+    text-decoration: line-through;
+}
+
+.pedidoId,
+.errorEmail {
     text-align: center;
     color: var(--text);
     font-size: var(--lg);
 }
-

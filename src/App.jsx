@@ -5,12 +5,12 @@ import Carrito from "./componentes/carrito/carrito";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Footer from "./componentes/footer";
 import './App.css';
-import Contacto from "./componentes/contacto/contacto";
+
 import { CartProvider } from "./context/CartContext";
-import React, {useEffect} from "react";
-import { addDoc, collection } from "firebase/firestore";
-import { db } from "./services/firebase";
-import { productos } from "./mock/data";
+import React, { useEffect } from "react";
+// import { addDoc, collection } from "firebase/firestore";
+// import { db } from "./services/firebase";
+// import { productos } from "./mock/data";
 import Checkout from "./componentes/Checkout/Checkout";
 
 
@@ -33,11 +33,10 @@ function App() {
           <Navbar />
           <Routes>
             <Route path='/' element={<Itemlistcontainer />} />
-            <Route path='/contacto' element={<Contacto />} />
             <Route path='/category/:categoryId' element={<Itemlistcontainer />} />
             <Route path='/item/:id' element={<ItemDetailContainer />} />
             <Route path='/carrito' element={<Carrito />} />
-            <Route path="/checkout" element={<Checkout/>} />
+            <Route path="/checkout" element={<Checkout />} />
           </Routes>
           <Footer />
 

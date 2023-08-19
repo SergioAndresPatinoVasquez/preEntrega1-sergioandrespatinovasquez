@@ -5,63 +5,60 @@ export const CartContext = createContext();
 
 const carritoInicial = JSON.parse(localStorage.getItem("carrito")) || [];
 
-export const CartProvider = ({children}) => {
-  // useEffect(()=>{
-  //   const colectionProductos = collection(db, 'productos')
-  //   productos.map((item)=> addDoc(colectionProductos, item))
-  // },[])
+export const CartProvider = ({ children }) => {
 
-  const [carrito, setCarrito]= useState(carritoInicial);
+  const [carrito, setCarrito] = useState(carritoInicial);
 
   const agregarAlCarrito = (producto, count) => {
-    const itemAgregado = {...producto, count}
+    const itemAgregado = { ...producto, count }
 
     const nuevoCarrito = [...carrito]
-    const estaEnElCarrito = nuevoCarrito.find((item)=> item.id === itemAgregado.id)
+    const estaEnElCarrito = nuevoCarrito.find((item) => item.id === itemAgregado.id)
 
-    if(estaEnElCarrito){
+    if (estaEnElCarrito) {
       estaEnElCarrito.count = estaEnElCarrito.count + count;
       setCarrito(nuevoCarrito);
-    }else{
+    } else {
       nuevoCarrito.push(itemAgregado);
       setCarrito(nuevoCarrito);
     }
-    
+
   }
 
-  useEffect(()=>{
+  useEffect(() => {
     localStorage.setItem("carrito", JSON.stringify(carrito))
-  },[carrito])
+  }, [carrito])
 
   const borrarProducto = (id) => {
-     setCarrito(carrito.filter((item)=> item.id !== id))
+    setCarrito(carrito.filter((item) => item.id !== id))
   }
 
   const clear = () => {
     setCarrito([])
   }
-  
-  const cantidadCarrito =()=>{
-    return carrito.reduce((acc, prod) => acc + prod.count,0);
+
+  const cantidadCarrito = () => {
+    return carrito.reduce((acc, prod) => acc + prod.count, 0);
   }
 
-  const total = () =>{
-    return carrito.reduce((acc, item) => acc + item.count*item.price,0)
+  const total = () => {
+    return carrito.reduce((acc, item) => acc + item.count * item.price, 0)
   }
 
   return (
     <CartContext.Provider value={{
-        cantidadCarrito,
-        carrito,
-        clear,
-        agregarAlCarrito,
-        borrarProducto,
-        total}}>
+      cantidadCarrito,
+      carrito,
+      clear,
+      agregarAlCarrito,
+      borrarProducto,
+      total
+    }}>
 
-        {children}
+      {children}
 
-    </CartContext.Provider>    
-    )
-      
+    </CartContext.Provider>
+  )
+
 }
 

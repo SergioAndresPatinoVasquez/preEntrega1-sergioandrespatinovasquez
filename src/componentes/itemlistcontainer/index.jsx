@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { getProducto } from '../../mock/data';
 import './index.css';
 import ItemList from '../itemList';
 import PacmanLoader from "react-spinners/PacmanLoader";
@@ -24,44 +23,21 @@ const override = {
 
 const Itemlistcontainer = () => {
     const [productos, setProductos] = useState([]);
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const [titulo, setTitulo] = useState("Productos");
     const { categoryId } = useParams();
 
 
-    // useEffect(()=>{
-
-    //     setLoading(true)
-
-    //     getProducto()
-    //     .then((res) => {
-
-    //         if (categoryId === "baterias"){
-    //             setProductos(res.filter((item)=>item.category === "baterias"));
-    //             setTitulo("Baterías");
-    //         }
-    //         else if(categoryId){
-
-    //             setProductos(res.filter((item)=>item.category === categoryId));
-    //             setTitulo(categoryId);
-
-    //         }else{
-    //             setProductos(res);
-    //             setTitulo("Productos");
-    //         }
-    //     })
-    //     .finally(()=> setLoading(false))
-    // },[categoryId])
-
     useEffect(() => {
-        setLoading(true)
-        getProducto()
-
-        const coleccionProductos = categoryId ? query(collection(db, "productos"), where("category", "==", categoryId)) : collection(db, "productos")
-        getDocs(coleccionProductos)
+         setLoading(true)
+            console.log("loading",loading)
+            const coleccionProductos = categoryId ? query(collection(db, "productos"), where("category", "==", categoryId)) : collection(db, "productos")
+            getDocs(coleccionProductos)
+        
+        
 
             .then((res) => {
-
+                
                 const list = res.docs.map((product) => {
                     return {
                         id: product.id,
@@ -88,7 +64,7 @@ const Itemlistcontainer = () => {
             .finally(setLoading(false))
     }, [categoryId])
 
-
+    console.log("loading", loading);
     return (
         <menu>
             <section>

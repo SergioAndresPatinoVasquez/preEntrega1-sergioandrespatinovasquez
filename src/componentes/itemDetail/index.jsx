@@ -31,7 +31,7 @@ const restar = () =>{
 
                 <p className='detail'><span>Detalle del producto : </span>{producto.name}.</p>
                 <p className='detail'> <span>Referencia :</span> {producto.reference}.</p>
-                <p className='detail'> <span>Stock : </span>{producto.stock} unidades.</p>
+                <p className='detail'> <span>Stock : </span>{producto.stock} unidad(es).</p>
                 <p className='detail'><span>Precio :</span> ${producto.price}</p>
                 <p className='detail'><span>Descripción del producto :</span> {producto.description}</p>
                             

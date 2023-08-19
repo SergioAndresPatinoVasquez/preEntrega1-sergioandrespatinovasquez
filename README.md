@@ -1,7 +1,7 @@
 
 # Tienda Musical
 
-La ecommerce cuenta con una serie de productos musicales los cuales están clasificados  por las siguientes categorías : guitarras, saxofones, pianos y baterías. Una vez el cliente encuentre el producto de su gusto le debe dar click en la opción "ver detalles" y allí encontrará una breve descripción del producto y el número de unidades disponibles para su compra, allí el usuario puede agregar al carrito su producto. Para acceder al carrito, el usuario debe dar click en el icono del carrito ubicado en la esquina superior derecha, abrira el detalle de los productos agregados y podra eliminar alguno si es requerido, si todo está bien puede acceder a colocar el pedido agregando algunos datos personales.
+La ecommerce cuenta con una serie de productos musicales los cuales están clasificados  por las siguientes categorías : guitarras, saxofones, pianos y baterías. Una vez el cliente encuentre el producto de su gusto, haciendo click en la opción "ver detalles" encontrará una breve descripción del producto y el número de unidades disponibles para su compra, desde allí el usuario puede agregar al carrito su producto. Haciendo click en el icono del carrito ubicado en la esquina superior derecha, abrirá el detalle de los productos agregados y podra eliminar alguno si es requerido, si todo está bien puede acceder a colocar el pedido agregando algunos datos personales.
 
 
 

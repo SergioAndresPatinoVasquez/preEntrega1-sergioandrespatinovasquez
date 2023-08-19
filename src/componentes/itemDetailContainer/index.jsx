@@ -18,37 +18,30 @@ const override = {
 
 
 const ItemDetailContainer = () => {
-    const [producto, setProducto] = useState([])
-    const [loading, setLoading] = useState(false)
-    const { id } = useParams()
+  const [producto, setProducto] = useState([])
+  const [loading, setLoading] = useState(true)
+  const { id } = useParams()
 
-    // useEffect (()=>{
-    //   setLoading(true)
-    //     getItem(id)
-    //     .then((res)=> setProducto(res))
-    //     .catch((error)=> console.log(error))
-    //     .finally(()=> setLoading(false))
-    // },[])
 
-    useEffect(()=>{
-      setLoading(true)
-      getItem(id)
-      const collectionProd = collection(db,'productos')
-      const referenciaAlDoc = doc(collectionProd, id)
-      getDoc(referenciaAlDoc)
-      .then((res)=> setProducto({id:res.id, ...res.data()}))
-      .catch((error)=>console.log(error))
-      .finally(()=>setLoading(false))
+  useEffect(() => {
+    setLoading(true)
+    
+    const collectionProd = collection(db, 'productos')
+    const referenciaAlDoc = doc(collectionProd, id)
+    getDoc(referenciaAlDoc)
+      .then((res) => setProducto({ id: res.id, ...res.data() }))
+      .catch((error) => console.log(error))
+      .finally(() => setLoading(false))
 
-    },[])
+  }, [])
 
   return (
     <>
-      { loading ?
+      {loading ?
         <PacmanLoader color={'#63174A'} loading={loading} cssOverride={override} size={40} />
         :
-    
-        <ItemDetail producto={producto}/>
+
+        <ItemDetail producto={producto} />
       }
     </>
   )
